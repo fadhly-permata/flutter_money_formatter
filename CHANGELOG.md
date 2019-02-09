@@ -1,3 +1,8 @@
+## 0.2.2
+
+* Add Document public APIs
+
+
 ## 0.2.1
 
 * Fix someline on documention files.
