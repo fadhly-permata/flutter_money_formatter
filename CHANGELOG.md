@@ -1,3 +1,9 @@
-## 0.0.1
+## 0.1.0
 
-* TODO: Describe initial release.
+* Initial Release
+
+
+## 0.1.1
+
+* Add documentation
+* Removing unecessary line
