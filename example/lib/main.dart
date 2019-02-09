@@ -11,7 +11,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    var _toc = Theme.of(context).copyWith();
     TextStyle titleStyle = TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold);
     TextStyle subtitleStyle = TextStyle(fontSize: 20.0);
 

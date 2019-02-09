@@ -1,8 +1,8 @@
 name: flutter_money_formatter
-description: A new flutter plugin project.
+description: Money formatter for flutter
 version: 0.1.0
-author:
-homepage:
+author: Fadhly Permata <fadhly.permata@gmail.com>
+homepage: https://github.com/fadhly-permata/flutter_money_formatter
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
