@@ -1,3 +1,7 @@
+## 0.2.1
+
+* Fix someline on documention files.
+
 ## 0.2.0
 
 * Change `meta` package into `foundation` package.

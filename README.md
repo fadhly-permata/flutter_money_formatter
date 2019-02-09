@@ -54,7 +54,7 @@ FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345)
 Of course, you don't need to change the whole notation. By default the parameters above have the default values as follows:
 
 
-| Anotation                     | Data Type | Default Value    |
+| Notation                      | Data Type | Default Value    |
 | ----------------------------- | --------- | ---------------- |
 | `symbol`                      | `String`  | `$` (USD Symbol) |
 | `thousandSeparator`           | `String`  | `,`              |

@@ -1,3 +1,10 @@
+/// 
+/// 
+/// Copyright (c) 2019, Fadhly Permata.
+/// 
+/// 
+
+
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
 
