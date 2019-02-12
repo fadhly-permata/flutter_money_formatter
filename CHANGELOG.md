@@ -1,4 +1,9 @@
-## 0.4.1
+## 0.4.3
+
+* [ADD] Fix documentation for method name changes.
+
+
+## 0.4.2
 
 * [ADD] Revise license note.
 
