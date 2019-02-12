@@ -11,7 +11,8 @@
 [![version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.0)
 [![version](https://img.shields.io/badge/version-0.4.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.1)
 [![version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.2)
-[![version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)
+[![version](https://img.shields.io/badge/version-0.4.3-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)
+[![version](https://img.shields.io/badge/version-0.4.4-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.4)
 
  ![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
 
