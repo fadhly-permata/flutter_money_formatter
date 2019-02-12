@@ -1,6 +1,6 @@
 # FlutterMoneyFormatter
 
-![pub-version](https://img.shields.io/badge/pub-0.3.0-orange.svg)
+![pub-version](https://img.shields.io/badge/pub-0.3.0-orange.svg) ![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
 
 `FlutterMoneyFormatter` is a Flutter extension that can be used to handle currency formats that are not bound by the operating system configuration.
 

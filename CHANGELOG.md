@@ -1,12 +1,17 @@
+## 0.3.1
+
+* [ADD] Add some badges
+
 ## 0.3.0
-* [ADD] compare methods:
+
+* [ADD] Compare methods:
   - `isLowerThan`
   - `isGreaterThan`
   - `isEqual`
   - `isEqualOrLowerThan`
   - `isEqualOrGreaterThan`
 
-* [UPDATE] documentation
+* [UPDATE] Update documentation
 
 ## 0.2.2
 
