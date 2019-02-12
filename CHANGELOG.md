@@ -1,4 +1,4 @@
-## 0.4.3
+## 0.4.5
 
 * [ADD] Fix documentation for method name changes.
 

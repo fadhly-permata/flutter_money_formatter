@@ -13,6 +13,7 @@
 [![version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.2)
 [![version](https://img.shields.io/badge/version-0.4.3-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)
 [![version](https://img.shields.io/badge/version-0.4.4-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.4)
+[![version](https://img.shields.io/badge/version-0.4.5-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.5)
 
  ![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
 
@@ -52,7 +53,7 @@ After that you can request various results of the format as follows:
 print(fmf.formattedNonSymbol); // 12,345,678.90
 print(fmf.formattedLeftSymbol); // $12,345,678.90
 print(fmf.formattedRightSymbol); // 12,345,678.90$
-print(fmf.decimalOnly); // 90
+print(fmf.fractionDigitsOnly); // 90
 print(fmf.withoutDecimal); // 12,345,678
 
 // compact form
@@ -74,7 +75,7 @@ FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(value: 12345678.9012345)
     ..spaceBetweenSymbolAndNumber = true;
 ```
 
-Of course, you don't need to change the whole notation above. By default the parameters above have the default values as follows:
+Of course, you don't need to change the whole properties like on above sample. By default the properties above have the default values as follows:
 
 
 | Notation                      | Data Type                         | Default Value                 | Description   |
