@@ -1,3 +1,8 @@
+## 0.4.1
+
+* [ADD] Add compact format support
+
+
 ## 0.4.0
 
 * [ADD] Add compact format support.
