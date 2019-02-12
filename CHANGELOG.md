@@ -1,5 +1,9 @@
 ## 0.4.1
 
+* [ADD] Revise license note.
+
+## 0.4.1
+
 * [ADD] Add compact format support
 * [ADD] add version badges on documentation
 
