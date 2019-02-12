@@ -15,11 +15,11 @@ class _MyAppState extends State<MyApp> {
     TextStyle subtitleStyle = TextStyle(fontSize: 20.0);
 
     FlutterMoneyFormatter fmf = FlutterMoneyFormatter(
-      value: 12345678.9012345
+      amount: 12345678.9012345
     )
     ..symbol = 'Rp'
     ..spaceBetweenSymbolAndNumber = true
-    ..decimalLength = 4;
+    ..fractionDigits = 4;
 
     return MaterialApp(
       home: Scaffold(
@@ -49,11 +49,11 @@ class _MyAppState extends State<MyApp> {
               ),
               ListTile(
                 title: Text('DecimalOnly :', style: titleStyle,),
-                subtitle: Text(fmf.decimalOnly, style: subtitleStyle,),
+                subtitle: Text(fmf.fractionDigitsOnly, style: subtitleStyle,),
               ),
               ListTile(
                 title: Text('FormattedNonSymbolCustom :', style: titleStyle,),
-                subtitle: Text(fmf.copyWith(value: 123.4567, decimalLength: 2).formattedNonSymbol, style: subtitleStyle,),
+                subtitle: Text(fmf.copyWith(value: 123.4567, fractionDigits: 2).formattedNonSymbol, style: subtitleStyle,),
               ),
               ListTile(
                 title: Text('FormattedLeftSymbolCustom :', style: titleStyle,),

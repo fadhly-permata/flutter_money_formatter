@@ -1,3 +1,13 @@
+## 0.3.0
+* [ADD] compare methods:
+  - `isLowerThan`
+  - `isGreaterThan`
+  - `isEqual`
+  - `isEqualOrLowerThan`
+  - `isEqualOrGreaterThan`
+
+* [UPDATE] documentation
+
 ## 0.2.2
 
 * Add Document public APIs

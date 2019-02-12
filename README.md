@@ -1,14 +1,16 @@
-# flutter_money_formatter
+# FlutterMoneyFormatter
 
-Money formatter for flutter
+![pub-version](https://img.shields.io/badge/pub-0.3.0-orange.svg)
 
-Use this package if you need more costumization when formatting money in flutter.
+`FlutterMoneyFormatter` is a Flutter extension that can be used to handle currency formats that are not bound by the operating system configuration.
+
+In formatting currencies, you can easily do it without having to make your own formatter. Because `FlutterMoneyFormatter` is indeed designed to work independently and has complete utilities.
 
 ![logo](doc/flutter_logo.png)
 
 ## Install
 
-Follow this [GUIDE](https://pub.dartlang.org/packages/flutter_money_formatter#-installing-tab-)
+For the complete step, the installation of `Flutter Money Formatter` can be seen here. : [Installation Guide](https://pub.dartlang.org/packages/flutter_money_formatter#-installing-tab-)
 
 ## Usage
 
@@ -38,12 +40,12 @@ print(fmf.decimalOnly); // 90
 print(fmf.withoutDecimal); // 12,345,678
 ```
 
-## Configuration
+## Configurations
 
 To adjust the format to suit your needs, you can use my favorite notation way:
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345)
+FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(value: 12345678.9012345)
     ..symbol = 'IDR'
     ..thousandSeparator = '.'
     ..decimalSeparator = ','
@@ -51,19 +53,21 @@ FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345)
     ..spaceBetweenSymbolAndNumber = true;
 ```
 
-Of course, you don't need to change the whole notation. By default the parameters above have the default values as follows:
+Of course, you don't need to change the whole notation above. By default the parameters above have the default values as follows:
 
 
-| Notation                      | Data Type | Default Value    |
-| ----------------------------- | --------- | ---------------- |
-| `symbol`                      | `String`  | `$` (USD Symbol) |
-| `thousandSeparator`           | `String`  | `,`              |
-| `decimalSeparator`            | `String`  | `.`              |
-| `decimalLength`               | `int`     | `2`              |
-| `spaceBetweenSymbolAndNumber` | `bool`    | `false`          |
+| Notation                      | Data Type | Default Value     | Description   |
+| ----------------------------- | --------- | ----------------- | ------------- |
+| `symbol`                      | `String`  | `$` (Dollar Sign) | The symbol that will be used on formatted output. |
+| `thousandSeparator`           | `String`  | `,`               | The character that will be used as thousand separator on formatted output. |
+| `decimalSeparator`            | `String`  | `.`               | The character that will be used as decimal separator on formatted output. |
+| `fractionDigits`              | `int`     | `2`               | The fraction digits that will be used on formatted output. |
+| `spaceBetweenSymbolAndNumber` | `bool`    | `false`           | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
 
 
-Duplicating the `instance` and change some configurations
+# Duplicating Instance
+
+For some reasons, you may need to duplicate the `instance` and change some configurations. To do that, you can use the `copyWith` method as below:
 
 ```dart
 FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345)
@@ -71,3 +75,15 @@ FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345)
 print(fmf.formattedLeftSymbol);
 print(fmf.copyWith(symbol: 'IDR', spaceBetweenSymbolAndNumber: true).formattedLeftSymbol);
 ```
+
+---
+
+# Complete Methods
+| Method                    | Parameter         | Descriptions |
+| ------------------------- | ----------------- | ------------ |
+| `isLowerThan`             | `amount`          | Check current instance-amount is lower than [amount] or not.  |
+| `isGreaterThan`           | `amount`          | Check current instance-amount is greater than [amount] or not. |
+| `isEqual`                 | `amount`          | Check current instance amount is equal than [amount] or not. |
+| `isEqualOrLowerThan`      | `amount`          | Check current instance amount is equal or lower than [amount] or not. |
+| `isEqualOrGreaterThan`    | `amount`          | Check current instance amount is equal or greater than [amount] or not. |
+| `CopyWith`                | [see here](#configurations) | [see here](#duplicating-instance) |
