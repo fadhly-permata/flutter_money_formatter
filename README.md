@@ -1,6 +1,17 @@
 # FlutterMoneyFormatter
 
-![pub-version](https://img.shields.io/badge/version-0.4.0-orange.svg) ![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
+
+[![version](https://img.shields.io/badge/version-0.1.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.0) 
+[![version](https://img.shields.io/badge/version-0.1.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.1) 
+[![version](https://img.shields.io/badge/version-0.2.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.0) 
+[![version](https://img.shields.io/badge/version-0.2.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.1)
+[![version](https://img.shields.io/badge/version-0.2.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.2)
+[![version](https://img.shields.io/badge/version-0.3.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.0)
+[![version](https://img.shields.io/badge/version-0.3.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.1)
+[![version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.0)
+[![version](https://img.shields.io/badge/version-0.4.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.1)
+
+ ![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
 
 `FlutterMoneyFormatter` is a Flutter extension that can be used to handle currency formats that are not bound by the operating system configuration.
 
@@ -11,6 +22,7 @@ In formatting currencies, you can easily do it without having to make your own f
 ## Install
 
 For the complete step, the installation of `Flutter Money Formatter` can be seen here. : [Installation Guide](https://pub.dartlang.org/packages/flutter_money_formatter#-installing-tab-)
+
 
 ## Usage
 
