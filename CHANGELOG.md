@@ -1,3 +1,8 @@
+## 0.4.0
+
+* [ADD] Add compact format support.
+* [UPDATE] Update documentation.
+
 ## 0.3.1
 
 * [ADD] Add some badges

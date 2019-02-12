@@ -33,11 +33,17 @@ FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345);
 After that you can request various results of the format as follows:
 
 ```dart
+// normal form
 print(fmf.formattedNonSymbol); // 12,345,678.90
 print(fmf.formattedLeftSymbol); // $12,345,678.90
 print(fmf.formattedRightSymbol); // 12,345,678.90$
 print(fmf.decimalOnly); // 90
 print(fmf.withoutDecimal); // 12,345,678
+
+// compact form
+print(fmf.compactNonSymbol) // 12.3M
+print(fmf.compactLeftSymbol) // $12.3M
+print(fmf.compactRightSymbol) // 12.3M$
 ```
 
 ## Configurations
@@ -56,13 +62,24 @@ FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(value: 12345678.9012345)
 Of course, you don't need to change the whole notation above. By default the parameters above have the default values as follows:
 
 
-| Notation                      | Data Type | Default Value     | Description   |
-| ----------------------------- | --------- | ----------------- | ------------- |
-| `symbol`                      | `String`  | `$` (Dollar Sign) | The symbol that will be used on formatted output. |
-| `thousandSeparator`           | `String`  | `,`               | The character that will be used as thousand separator on formatted output. |
-| `decimalSeparator`            | `String`  | `.`               | The character that will be used as decimal separator on formatted output. |
-| `fractionDigits`              | `int`     | `2`               | The fraction digits that will be used on formatted output. |
-| `spaceBetweenSymbolAndNumber` | `bool`    | `false`           | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
+| Notation                      | Data Type                         | Default Value                 | Description   |
+| ----------------------------- | --------------------------------- | ----------------------------- | ------------- |
+| `symbol`                      | `String`                          | `$` (Dollar Sign)             | The symbol that will be used on formatted output. |
+| `thousandSeparator`           | `String`                          | `,`                           | The character that will be used as thousand separator on formatted output. |
+| `decimalSeparator`            | `String`                          | `.`                           | The character that will be used as decimal separator on formatted output. |
+| `fractionDigits`              | `int`                             | `2`                           | The fraction digits that will be used on formatted output. |
+| `spaceBetweenSymbolAndNumber` | `bool`                            | `false`                       | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
+| `compactFormatCase`           | [see Here](#CompactFormatCase)    | `CompactFormatCase.uppercase` | Compact format case type, lowercases or uppercase. |
+
+
+# CompactFormatCase
+
+Use can change the case for compact format case like for million using `M` or `m`, or Killo using `K` or `k`. and so on. This type only supports two cases type as described below:
+
+| Value                         | Description |
+| ----------------------------- | ---------- |
+| CompactFormatCase.lowercase   | Used to make the compact format displayed using lowercase. |
+| CompactFormatCase.uppercase   | Used to make the compact format displayed using uppercase. |
 
 
 # Duplicating Instance
