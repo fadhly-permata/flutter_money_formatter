@@ -17,7 +17,6 @@ class FlutterMoneyFormatter {
   /// Amount number that will be formatted.
   double amount;
 
-
   /// The [symbol] that will be used on formatted output, default value is $ (Dollar Sign)
   String symbol = '\$';
   // The character that will be used as thousand separator on formatted output, default value is ',' (comma)
@@ -96,14 +95,14 @@ class FlutterMoneyFormatter {
 
   /// Copies current instance and change some values to the new instance.
   FlutterMoneyFormatter copyWith(
-      {double value,
+      {double amount,
       String symbol,
       String thousandSeparator,
       String decimalSeparator,
       int fractionDigits,
       bool spaceBetweenSymbolAndNumber,
       CompactFormatCase compactFormatCase}) {
-    return FlutterMoneyFormatter(amount: value ?? this.amount)
+    return FlutterMoneyFormatter(amount: amount ?? this.amount)
       ..symbol = symbol ?? this.symbol
       ..thousandSeparator = thousandSeparator ?? this.thousandSeparator
       ..decimalSeparator = decimalSeparator ?? this.decimalSeparator

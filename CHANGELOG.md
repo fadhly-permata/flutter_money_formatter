@@ -1,3 +1,8 @@
+## 0.4.6
+
+* [FIX] Fix inconsisten naming on source code & documentation
+
+
 ## 0.4.5
 
 * [ADD] Fix documentation for method name changes.
@@ -6,6 +11,7 @@
 ## 0.4.2
 
 * [ADD] Revise license note.
+
 
 ## 0.4.1
 
@@ -18,9 +24,11 @@
 * [ADD] Add compact format support.
 * [UPDATE] Update documentation.
 
+
 ## 0.3.1
 
 * [ADD] Add some badges
+
 
 ## 0.3.0
 
@@ -33,6 +41,7 @@
 
 * [UPDATE] Update documentation
 
+
 ## 0.2.2
 
 * Add Document public APIs
@@ -42,14 +51,17 @@
 
 * Fix someline on documention files.
 
+
 ## 0.2.0
 
 * Change `meta` package into `foundation` package.
+
 
 ## 0.1.1
 
 * Add documentation
 * Removing unecessary line
+
 
 ## 0.1.0
 

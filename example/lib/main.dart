@@ -56,7 +56,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   ListTile(
                     title: Text('FormattedNonSymbolCustom :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(value: 123.4567, fractionDigits: 2).formattedNonSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 123.4567, fractionDigits: 2).formattedNonSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('FormattedLeftSymbolCustom :', style: titleStyle,),
@@ -68,11 +68,11 @@ class _MyAppState extends State<MyApp> {
                   ),
                   ListTile(
                     title: Text('CompactLeftSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(value: 1234.56789).compactLeftSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 1234.56789).compactLeftSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('CompactRightSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(value: 123456.7890, compactFormatCase: CompactFormatCase.lowercase).compactRightSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 123456.7890, compactFormatCase: CompactFormatCase.lowercase).compactRightSymbol, style: subtitleStyle,),
                   )
                 ],
               ),

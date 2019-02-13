@@ -14,6 +14,7 @@
 [![version](https://img.shields.io/badge/version-0.4.3-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)
 [![version](https://img.shields.io/badge/version-0.4.4-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.4)
 [![version](https://img.shields.io/badge/version-0.4.5-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.5)
+[![version](https://img.shields.io/badge/version-0.4.6-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.6)
 
  ![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
 
@@ -43,7 +44,7 @@ To be able to format the `double` value into the various formats you want, you f
 
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345);
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
 ```
 
 After that you can request various results of the format as follows:
@@ -67,7 +68,7 @@ print(fmf.compactRightSymbol) // 12.3M$
 To adjust the format to suit your needs, you can use my favorite notation way:
 
 ```dart
-FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(value: 12345678.9012345)
+FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(amount: 12345678.9012345)
     ..symbol = 'IDR'
     ..thousandSeparator = '.'
     ..decimalSeparator = ','
@@ -103,7 +104,7 @@ Use can change the case for compact format case like for million using `M` or `m
 For some reasons, you may need to duplicate the `instance` and change some configurations. To do that, you can use the `copyWith` method as below:
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(value: 12345678.9012345)
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345)
 
 print(fmf.formattedLeftSymbol);
 print(fmf.copyWith(symbol: 'IDR', spaceBetweenSymbolAndNumber: true).formattedLeftSymbol);
