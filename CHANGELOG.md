@@ -1,73 +1,78 @@
+## 0.4.8
+
+* **[FIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
+
+
 ## 0.4.7
 
-* [CHANGE] Change package description
-* [UPDATE] Enhance documentation
+* **[CHANGE]** Package description
+* **[CHANGE]** Enhance documentation
 
 
 
 ## 0.4.6
 
-* [FIX] Fix inconsisten naming on source code & documentation
+* **[FIX]** Inconsisten naming on source code & documentation
 
 
 ## 0.4.5
 
-* [ADD] Fix documentation for method name changes.
+* **[FIX]** Documentation for method name changes.
 
 
 ## 0.4.2
 
-* [ADD] Revise license note.
+* **[UPDATE]** Revise license note.
 
 
 ## 0.4.1
 
-* [ADD] Add compact format support
-* [ADD] add version badges on documentation
+* **[ADD]** Compact format support
+* **[ADD]** Version badges on documentation
 
 
 ## 0.4.0
 
-* [ADD] Add compact format support.
-* [UPDATE] Update documentation.
+* **[ADD]** Compact format support.
+* **[UPDATE]** Update documentation.
 
 
 ## 0.3.1
 
-* [ADD] Add some badges
+* **[ADD]** Some badges on documentation
 
 
 ## 0.3.0
 
-* [ADD] Compare methods:
+* **[ADD]** Compare methods:
   - `isLowerThan`
   - `isGreaterThan`
   - `isEqual`
   - `isEqualOrLowerThan`
   - `isEqualOrGreaterThan`
 
-* [UPDATE] Update documentation
+* **[UPDATE]** Documentation
 
 
 ## 0.2.2
 
-* Add Document public APIs
+* **[ADD]** Document public APIs
 
 
 ## 0.2.1
 
-* Fix someline on documention files.
+* **[FIX]** Someline on documention files.
 
 
 ## 0.2.0
 
-* Change `meta` package into `foundation` package.
+* **[OPTIMIZE]** Change `meta` package into `foundation` package.
 
 
 ## 0.1.1
 
-* Add documentation
-* Removing unecessary line
+* **[ADD]** Documentation
+* **[OPTIMIZE]** Removing unecessary line
 
 
 ## 0.1.0
