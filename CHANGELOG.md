@@ -1,3 +1,10 @@
+## 0.4.7
+
+* [CHANGE] Change package description
+* [UPDATE] Enhance documentation
+
+
+
 ## 0.4.6
 
 * [FIX] Fix inconsisten naming on source code & documentation
