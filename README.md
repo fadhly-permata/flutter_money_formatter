@@ -9,7 +9,7 @@
 
 
 #### Release Versions :
-[![version](https://img.shields.io/badge/version-0.4.7-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.7)  [![version](https://img.shields.io/badge/version-0.4.6-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.6)  [![version](https://img.shields.io/badge/version-0.4.5-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.5)  [![version](https://img.shields.io/badge/version-0.4.4-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.4)  [![version](https://img.shields.io/badge/version-0.4.3-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)  [![version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.2)  [![version](https://img.shields.io/badge/version-0.4.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.1)  [![version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.0)  [![version](https://img.shields.io/badge/version-0.3.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.1)  [![version](https://img.shields.io/badge/version-0.3.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.0)  [![version](https://img.shields.io/badge/version-0.2.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.2)  [![version](https://img.shields.io/badge/version-0.2.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.1)  [![version](https://img.shields.io/badge/version-0.2.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.0)  [![version](https://img.shields.io/badge/version-0.1.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.1) [![version](https://img.shields.io/badge/version-0.1.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.0)
+[![version](https://img.shields.io/badge/version-0.5.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.5.0) [![version](https://img.shields.io/badge/version-0.4.8+1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.8+1) [![version](https://img.shields.io/badge/version-0.4.8-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.8) [![version](https://img.shields.io/badge/version-0.4.7-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.7)  [![version](https://img.shields.io/badge/version-0.4.6-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.6)  [![version](https://img.shields.io/badge/version-0.4.5-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.5)  [![version](https://img.shields.io/badge/version-0.4.4-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.4)  [![version](https://img.shields.io/badge/version-0.4.3-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)  [![version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.2)  [![version](https://img.shields.io/badge/version-0.4.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.1)  [![version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.0)  [![version](https://img.shields.io/badge/version-0.3.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.1)  [![version](https://img.shields.io/badge/version-0.3.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.0)  [![version](https://img.shields.io/badge/version-0.2.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.2)  [![version](https://img.shields.io/badge/version-0.2.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.1)  [![version](https://img.shields.io/badge/version-0.2.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.0)  [![version](https://img.shields.io/badge/version-0.1.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.1) [![version](https://img.shields.io/badge/version-0.1.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.0)
 
 [Version change logs](https://pub.dartlang.org/packages/flutter_money_formatter#-changelog-tab-)
 
@@ -58,6 +58,8 @@ print(fmf.compactLeftSymbol) // $12.3M
 print(fmf.compactRightSymbol) // 12.3M$
 ```
 
+See [demo section](#demo) to get more info. 
+
 ## Configurations
 
 To adjust the format to suit your needs, you can use my favorite notation way:
@@ -81,17 +83,17 @@ Of course, you don't need to change the whole properties like on above sample. B
 | `decimalSeparator`            | `String`                          | `.`                           | The character that will be used as decimal separator on formatted output. |
 | `fractionDigits`              | `int`                             | `2`                           | The fraction digits that will be used on formatted output. |
 | `spaceBetweenSymbolAndNumber` | `bool`                            | `false`                       | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
-| `compactFormatCase`           | [see Here](#CompactFormatCase)    | `CompactFormatCase.uppercase` | Compact format case type, lowercases or uppercase. |
+| `CompactFormatType`           | [see Here](#CompactFormatType)    | `CompactFormatType.sort`      | Compact format type, sort or long type. |
 
 
-## CompactFormatCase
+## CompactFormatType
 
-You can change the text-case for compact format case like for million using `M` or `m`, or Killo using `K` or `k`. and so on. This type only supports two cases type as described below:
+You can change the type of compact format like for million using `M` or `million`, or trillion using `T` or `trillion`. and so on. This type only supports two type as described below:
 
 | Value                         | Description |
 | ----------------------------- | ---------- |
-| CompactFormatCase.lowercase   | Used to make the compact format displayed using lowercase. |
-| CompactFormatCase.uppercase   | Used to make the compact format displayed using uppercase. |
+| CompactFormatType.sort        | Used to make the compact format displayed using sort text. |
+| CompactFormatType.long        | Used to make the compact format displayed using long text. |
 
 
 ## Duplicating Instance
@@ -118,6 +120,9 @@ print(fmf.copyWith(symbol: 'IDR', spaceBetweenSymbolAndNumber: true).formattedLe
 | `isEqualOrGreaterThan`    | `amount`          | Check current instance amount is equal or greater than [amount] or not. |
 | `CopyWith`                | [see here](#configurations) | [see here](#duplicating-instance) |
 
+## Demo
+
+For more complete samples, you can grab it from the [example directory](https://github.com/fadhly-permata/flutter_money_formatter/tree/master/example).
 
 ## Help Me
 

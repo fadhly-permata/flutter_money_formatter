@@ -3,7 +3,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
 
-enum CompactFormatCase { lowercase, uppercase }
+enum CompactFormatType { sort, long }
 
 
 /// FlutterMoneyFormatter instance
@@ -32,13 +32,15 @@ class FlutterMoneyFormatter {
   bool spaceBetweenSymbolAndNumber = false;
 
   /// Compact format case
-  CompactFormatCase compactFormatCase = CompactFormatCase.uppercase;
+  CompactFormatType compactFormatType = CompactFormatType.sort;
 
 
   /// Returns formatted number
   String get _baseFormat =>
-      NumberFormat.currency(symbol: '', decimalDigits: fractionDigits)
-          .format(amount);
+      NumberFormat
+        .currency(symbol: '', decimalDigits: fractionDigits)
+        .format(amount);
+
 
   /// Returns formatted number with refined separator chars
   String get _refineSeparator => _baseFormat
@@ -52,8 +54,11 @@ class FlutterMoneyFormatter {
   String get _spacer => spaceBetweenSymbolAndNumber == true ? ' ' : '';
 
 
-  NumberFormat get _baseCompact => NumberFormat.compactCurrency(
-      symbol: this.symbol, decimalDigits: this.fractionDigits);
+  NumberFormat get _baseCompact 
+    => 
+      compactFormatType == CompactFormatType.sort 
+      ? NumberFormat.compact() 
+      : NumberFormat.compactLong();
 
 
   /// Returns formatted number without currency symbol
@@ -78,10 +83,21 @@ class FlutterMoneyFormatter {
 
   /// Returns compact format number without currency symbol
   String get compactNonSymbol {
-    String format = _baseCompact.format(amount).replaceAll('${this.symbol}', '');
-    return compactFormatCase == CompactFormatCase.lowercase
-        ? format.toLowerCase()
-        : format.toUpperCase();
+    String compacted = _baseCompact.format(amount);
+    String numerics = RegExp(r'(\d+\.\d+)|(\d+)')
+      .allMatches(compacted)
+      .map((_) => _.group(0))
+      .toString()
+      .replaceAll('(', '')
+      .replaceAll(')', '');
+
+    String alphas = compacted.replaceAll(numerics, '');
+
+    String reformat = NumberFormat
+      .currency(symbol: '', decimalDigits: numerics.indexOf('.') == -1 ? 0 : fractionDigits)
+      .format(num.parse(numerics));
+
+    return '$reformat$alphas';
   }
 
 
@@ -101,14 +117,14 @@ class FlutterMoneyFormatter {
       String decimalSeparator,
       int fractionDigits,
       bool spaceBetweenSymbolAndNumber,
-      CompactFormatCase compactFormatCase}) {
+      CompactFormatType compactFormatType}) {
     return FlutterMoneyFormatter(amount: amount ?? this.amount)
       ..symbol = symbol ?? this.symbol
       ..thousandSeparator = thousandSeparator ?? this.thousandSeparator
       ..decimalSeparator = decimalSeparator ?? this.decimalSeparator
       ..fractionDigits = fractionDigits ?? this.fractionDigits
       ..spaceBetweenSymbolAndNumber = spaceBetweenSymbolAndNumber ?? this.spaceBetweenSymbolAndNumber
-      ..compactFormatCase = compactFormatCase ?? this.compactFormatCase;
+      ..compactFormatType = compactFormatType ?? this.compactFormatType;
   }
 
   /// Check current instance amount is lower than [amount] or not

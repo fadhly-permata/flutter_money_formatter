@@ -1,84 +1,80 @@
-## 0.4.9
+# Version 0.5.*
 
-* **[REFIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
+* ## 0.5.0
+    * **[FIX]** Compact form as [described here](https://github.com/fadhly-permata/flutter_money_formatter/issues/1)
+    * **[DEPRECATED]** CompactFormatCase.
+    * **[UPDATE]** Update documentation.
+    * **[ADD]** CompactFormatType enum on format settings
 
-## 0.4.8
+---
 
-* **[FIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
+# Version 0.4.*
 
+* ## 0.4.8+1
+    * **[REFIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
 
-## 0.4.7
+* ## 0.4.8
+    * **[FIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
 
-* **[CHANGE]** Package description
-* **[CHANGE]** Enhance documentation
+* ## 0.4.7
+    * **[CHANGE]** Package description
+    * **[CHANGE]** Enhance documentation
 
+* ## 0.4.6
+    * **[FIX]** Inconsisten naming on source code & documentation
 
+* ## 0.4.5
+    * **[FIX]** Documentation for method name changes.
 
-## 0.4.6
-
-* **[FIX]** Inconsisten naming on source code & documentation
-
-
-## 0.4.5
-
-* **[FIX]** Documentation for method name changes.
-
-
-## 0.4.2
-
-* **[UPDATE]** Revise license note.
-
-
-## 0.4.1
-
-* **[ADD]** Compact format support
-* **[ADD]** Version badges on documentation
+* ## 0.4.2
+    * **[UPDATE]** Revise license note.
 
 
-## 0.4.0
-
-* **[ADD]** Compact format support.
-* **[UPDATE]** Update documentation.
-
-
-## 0.3.1
-
-* **[ADD]** Some badges on documentation
+* ## 0.4.1
+    * **[ADD]** Compact format support
+    * **[ADD]** Version badges on documentation
 
 
-## 0.3.0
+* ## 0.4.0
+    * **[ADD]** Compact format support.
+    * **[UPDATE]** Update documentation.
 
-* **[ADD]** Compare methods:
-  - `isLowerThan`
-  - `isGreaterThan`
-  - `isEqual`
-  - `isEqualOrLowerThan`
-  - `isEqualOrGreaterThan`
+---
 
-* **[UPDATE]** Documentation
+# Version 0.3.*
 
+* ## 0.3.1
+    * **[ADD]** Some badges on documentation
 
-## 0.2.2
+* ## 0.3.0
+    * **[UPDATE]** Documentation
+    * **[ADD]** Compare methods:
+        - `isLowerThan`
+        - `isGreaterThan`
+        - `isEqual`
+        - `isEqualOrLowerThan`
+        - `isEqualOrGreaterThan`
 
-* **[ADD]** Document public APIs
+---
 
+# Version 0.2.*
 
-## 0.2.1
+* ## [0.2.2]
+    * **[ADD]** Document public APIs
 
-* **[FIX]** Someline on documention files.
+* ## [0.2.1]
+    * **[FIX]** Someline on documention files.
 
+* ## [0.2.0]
+    * **[OPTIMIZE]** Change `meta` package into `foundation` package.
 
-## 0.2.0
+---
 
-* **[OPTIMIZE]** Change `meta` package into `foundation` package.
+# Version 0.1.*
 
+* ## [0.1.1]
+    * **[ADD]** Documentation
+    * **[OPTIMIZE]** Removing unecessary line
 
-## 0.1.1
-
-* **[ADD]** Documentation
-* **[OPTIMIZE]** Removing unecessary line
-
-
-## 0.1.0
-
-* Initial Release
+* ## [0.1.0]
+    * Initial Release
