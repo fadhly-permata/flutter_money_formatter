@@ -1,5 +1,8 @@
 # Version 0.5.*
 
+* ## 0.5.1
+    * [UPDATE] Update documentation
+
 * ## 0.5.0
     * **[FIX]** Compact form as [described here](https://github.com/fadhly-permata/flutter_money_formatter/issues/1)
     * **[DEPRECATED]** CompactFormatCase.

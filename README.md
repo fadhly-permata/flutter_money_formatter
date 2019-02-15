@@ -1,17 +1,14 @@
 # FlutterMoneyFormatter
 
 
-`FlutterMoneyFormatter` is an [Flutter](https://flutter.io) extension to formatting various types of currencies according to the characteristics you like, without having to be tied to any localization.
-
+> `FlutterMoneyFormatter` is a [Flutter](https://flutter.io) extension to formatting various types of currencies according to the characteristics you like, without having to be tied to any localization.
+>
+> [![latest version](https://img.shields.io/pub/v/flutter_money_formatter.svg?style=plastic&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAg8HMDMbfsHaAAABSUlEQVQY0y2LsUvUYRyHn+/7fe2uVMIz4hcnin+BFCrdZq1BQ1MN4VJxY7MoRLg7OGQ0NPkfiIOYBbYpiUO0VSQ15UFxHHf8fu/7cTif9XkeEz/54TO5qX4xtmJP8mZ8vR+vpt/q4gU3QitP3Iwr9fdhyerhPjZ7cBZH9Rf75ldSp11tXKsnZYHlEDvrt9dO4/dkjwjF6tde43M5GjGBlGoxrNtainGOsef9RqsMIyfUEZg8V1pVslf+crL3dup6EW6ZOMMRGEbmnmqh07bpkLEB89xhgMFQo8dRy4AZMGAe+EINkAEp2B6QhvHw7nOJ+9Fuq2guNsvKDaNiBvGLkUTQuf8Pd3e6U+MLKnGAkmkyf8xN/+zAeuFBKt+FZ6qGmux+tP3xw0TFGz7ZoffRlqQkSSolvRCK8Skmz9lpE3lIl0CiUfUix34BalOOAMgIffsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDItMTVUMDc6NDg6NTEtMDU6MDCMNC56AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAyLTE1VDA3OjQ4OjUxLTA1OjAw/WmWxgAAAABJRU5ErkJggg==)](https://pub.dartlang.org/packages/flutter_money_formatter)
+> [![last commit](https://img.shields.io/github/last-commit/fadhly-permata/flutter_money_formatter.svg?logo=github)](https://github.com/fadhly-permata/flutter_money_formatter)
+> [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACPVBMVEXLy9UAAADLy9Tn7ubo7+bh5+Lb397b397i6OLc4N/f4+Df5ODc4N/i5+Li5+Lk6ePj6ePf4uAAAFbo7ubn7uU5F3re4eDw9+ru9unk6uTu9unOztbLy9XQ0NfMzNXKydTLytXLytTKydPMzNXPz9fNzdbIyNPY29zZ3N3Z3N3Y29zb397b397Y29zZ3N3Z3N3Y29zIyNPNzdW/vM3Y29zc4N/c4N/c4N/c4N/c4N/c4N/c4N/c39/c4N/X29zAvM3b397c4N/b397b3t7b397b397b39/b397b3t7b39/c4N/b397b39/b397b39/a3t7c4N/c4N/a3t7b397b397b39/b39/b39/b39/b397b4N7b39/b397b39/b39/b397c4N/b397b397b397c4N/U19vb4N7b39/U1tvc4N/b397b397b397c4N/c4N/c4N/b397b4N7b39/b39/c4N/c4N/a3d7b397b397b397a3d7b4N7b39/a3d7b397b397b397a3d7T1NnU1trQ0dfb4N7b39/Q0dfU1trT1NnQ0dfT1NnR09jT1drT1drb4N7b39/T1trU1trR09jT1dnQ0NfNztbR0tjb397c4N/c4N/c4N/c4N/c4N/b39/NztbHx9LPz9fNzdXP0Nfb397b397b397b397b397b397b397b397FxNHJydTOztbPz9fMzNXNzdbOztbOztbLy9XLy9XNzdXMzNXPz9fc4N/c4N/c4N/c4N/c4N////9bn80kAAAAuXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMEAQAAAQQDBAQRGBYQZ2cQFhgRBAQCC9T7+vr///r71AsCI+pwN0Hg4EE3cOsjlE+PBdbVBY5PlVxvZWfa2WdlcFvKXVFYwAjU0wjAWFFdy7D7sNfXsfuwC3u7gxDX1hCDu3sLAwAE1tUEAAMECAYGCNPSCAYGCAQDBqrv/f3x/MsEAwQEBmihl5OTmJ98AwQEAwQEAQAAAAMEAzPoO4QAAAABYktHRL6k3IPDAAAAB3RJTUUH4wIPByY17oXROAAAAN1JREFUCNcB0gAt/wAdHh8AIAEBAQEhAiIjJAAlJicoKSorLC0uLzAxMgAzNDU2Nzg5Ojs3PD0+PwADQEFCQ0RFRkdISUpLBAAFTE1OTwZQUQdSU1RVCABWVwlYWQpaWwtcXQxeXwBgYWJjZGVmZ2hpamtsbQBuuW+6cA1xcg5zu3S8dQB2d3h5eg97fBB9fn+AgQCCEYMShBOFhhSHFYgWiQCKi4yNjhePkBiRkpOUlQCWlxmYvZmam5ydnp+goQCioxqkpaanqKmqq6ytrgCvsLGyG7MBAbQctba3uPQxRmBOIi5hAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAyLTE1VDA3OjM4OjUzLTA1OjAwMpAq0AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMi0xNVQwNzozODo1My0wNTowMEPNkmwAAAAASUVORK5CYII=)](https://raw.githubusercontent.com/fadhly-permata/flutter_money_formatter/master/LICENSE)
 
 #### Dependencies :
-![dart-sdk](https://img.shields.io/badge/Dart%20SDK-%3E=2.1.0%3C3.0.0-green.svg) ![intl](https://img.shields.io/badge/intl-0.15.7-green.svg)
-
-
-#### Release Versions :
-[![version](https://img.shields.io/badge/version-0.5.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.5.0) [![version](https://img.shields.io/badge/version-0.4.8+1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.8+1) [![version](https://img.shields.io/badge/version-0.4.8-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.8) [![version](https://img.shields.io/badge/version-0.4.7-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.7)  [![version](https://img.shields.io/badge/version-0.4.6-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.6)  [![version](https://img.shields.io/badge/version-0.4.5-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.5)  [![version](https://img.shields.io/badge/version-0.4.4-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.4)  [![version](https://img.shields.io/badge/version-0.4.3-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.3)  [![version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.2)  [![version](https://img.shields.io/badge/version-0.4.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.1)  [![version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.4.0)  [![version](https://img.shields.io/badge/version-0.3.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.1)  [![version](https://img.shields.io/badge/version-0.3.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.3.0)  [![version](https://img.shields.io/badge/version-0.2.2-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.2)  [![version](https://img.shields.io/badge/version-0.2.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.1)  [![version](https://img.shields.io/badge/version-0.2.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.2.0)  [![version](https://img.shields.io/badge/version-0.1.1-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.1) [![version](https://img.shields.io/badge/version-0.1.0-orange.svg)](https://pub.dartlang.org/packages/flutter_money_formatter/versions/0.1.0)
-
-[Version change logs](https://pub.dartlang.org/packages/flutter_money_formatter#-changelog-tab-)
+[![intl](https://img.shields.io/pub/vpre/intl.svg?label=intl&colorA=gray&colorB=green&style=plastic)](https://pub.dartlang.org/packages/intl)
 
 
 ----
@@ -126,11 +123,9 @@ For more complete samples, you can grab it from the [example directory](https://
 
 ## Help Me
 
-If you find an issue, bug, question, or want to request a new feature you can [do it here.](https://github.com/fadhly-permata/flutter_money_formatter/issues)
-
-You can also help me improve and develop features by [forking this project via Github](https://github.com/fadhly-permata/flutter_money_formatter)
+If you find an issue, bug, question, or want to request a new feature you can [do it here](https://github.com/fadhly-permata/flutter_money_formatter/issues). You can also help me to improve features or fix some issues by [forking this project via Github](https://github.com/fadhly-permata/flutter_money_formatter)
 
 
 ## ChangeLog
 
-You are curious about the changes that occur in each version? [See here for detailed information](https://pub.dartlang.org/packages/flutter_money_formatter#-changelog-tab-).
+Are you curious about the changes that occur in each version? [See here for detailed informations](https://pub.dartlang.org/packages/flutter_money_formatter#-changelog-tab-).
