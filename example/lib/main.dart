@@ -1,3 +1,7 @@
+/// Copyright (c) 2019, Fadhly Permata.
+/// email   : fadhly.permata@gmail.com
+/// github  : https://github.com/fadhly-permata/flutter_money_formatter
+
 import 'package:flutter/material.dart';
 import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 
@@ -17,9 +21,6 @@ class _MyAppState extends State<MyApp> {
     FlutterMoneyFormatter fmf = FlutterMoneyFormatter(
       amount: 12345678.9012345
     );
-    // ..symbol = 'Rp'
-    // ..spaceBetweenSymbolAndNumber = true
-    // ..fractionDigits = 2;
 
     return MaterialApp(
       home: Scaffold(

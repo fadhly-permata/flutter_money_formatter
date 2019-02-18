@@ -1,8 +1,14 @@
 /// Copyright (c) 2019, Fadhly Permata.
+/// email   : fadhly.permata@gmail.com
+/// github  : https://github.com/fadhly-permata/flutter_money_formatter
+
+library flutter_money_formatter;
 
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
 
+
+/// An enum to be used on compact text format
 enum CompactFormatType { sort, long }
 
 
@@ -54,6 +60,7 @@ class FlutterMoneyFormatter {
   String get _spacer => spaceBetweenSymbolAndNumber == true ? ' ' : '';
 
 
+  /// Returns base compact format
   NumberFormat get _baseCompact 
     => 
       compactFormatType == CompactFormatType.sort 

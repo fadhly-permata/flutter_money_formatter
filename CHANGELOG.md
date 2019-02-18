@@ -1,5 +1,10 @@
 # Version 0.5.*
 
+* ## 0.5.2
+    * [FIX] Fix missing tags on documentation
+    * [ADD] License notice on library
+    * [ADD] `library` tag on header
+
 * ## 0.5.1
     * [UPDATE] Update documentation
 
