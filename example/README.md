@@ -67,20 +67,20 @@ FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(amount: 12345678.9012345)
     ..thousandSeparator = '.'
     ..decimalSeparator = ','
     ..fractionDigits = 3
-    ..spaceBetweenSymbolAndNumber = true;
+    ..symbolAndNumberSeparator = '-';
 ```
 
 Of course, you don't need to change the whole properties like on above sample. By default the properties have the default values as follows:
 
 
-| Configuration Property        | Data Type                         | Default Value                 | Description   |
-| ----------------------------- | --------------------------------- | ----------------------------- | ------------- |
-| `symbol`                      | `String`                          | `$` (Dollar Sign)             | The symbol that will be used on formatted output. |
-| `thousandSeparator`           | `String`                          | `,`                           | The character that will be used as thousand separator on formatted output. |
-| `decimalSeparator`            | `String`                          | `.`                           | The character that will be used as decimal separator on formatted output. |
-| `fractionDigits`              | `int`                             | `2`                           | The fraction digits that will be used on formatted output. |
-| `spaceBetweenSymbolAndNumber` | `bool`                            | `false`                       | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
-| `compactFormatType`           | [CompactFormatType](#CompactFormatType) | `CompactFormatType.sort`      | Compact format type, sort or long type. |
+| Configuration Property        | Data Type                                 | Default Value                 | Description   |
+| ----------------------------- | ----------------------------------------- | ----------------------------- | ------------- |
+| `symbol`                      | `String`                                  | `$` (Dollar Sign)             | The symbol that will be used on formatted output. |
+| `thousandSeparator`           | `String`                                  | `,`                           | The character that will be used as thousand separator on formatted output. |
+| `decimalSeparator`            | `String`                                  | `.`                           | The character that will be used as decimal separator on formatted output. |
+| `fractionDigits`              | `int`                                     | `2`                           | The fraction digits that will be used on formatted output. |
+| `symbolAndNumberSeparator`    | `String`                                  | `' '` (Space)                 | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
+| `compactFormatType`           | [CompactFormatType](#CompactFormatType)   | `CompactFormatType.sort`      | Compact format type, sort or long type. |
 
 
 ## CompactFormatType
@@ -100,8 +100,8 @@ For some reasons, you may need to duplicate the `instance` and just need to chan
 ```dart
 FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345)
 
-print(fmf.formattedLeftSymbol);
-print(fmf.copyWith(symbol: 'IDR', spaceBetweenSymbolAndNumber: true).formattedLeftSymbol);
+print(fmf.formattedLeftSymbol); // $ 12,345,678.90
+print(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').formattedLeftSymbol); // IDR-12,345,678.90
 ```
 
 ---

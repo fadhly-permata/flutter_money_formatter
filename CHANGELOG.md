@@ -1,6 +1,13 @@
 # Version 0.5.*
+
+* ## [0.5.4]
+    * **[DEPRECATED]** `spaceBetweenSymbolAndNumber` is deprecated and UPDATEd with `symbolAndNumberSeparator`
+    * **[ADD]** `symbolAndNumberSeparator` with `String` data type.
+    * **[UPDATE]** documentation to match with the library capability.
+    * **[UPDATE]** Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/).
+    
 * ## [0.5.3]
-    * **[FIX]** CHANGELOG format
+    * **[FIX]** UPDATELOG format
 
 * ## [0.5.2]
     * **[FIX]** Fix missing tags on documentation
@@ -27,8 +34,8 @@
     * **[FIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
 
 * ## [0.4.7]
-    * **[CHANGE]** Package description
-    * **[CHANGE]** Enhance documentation
+    * **[UPDATE]** Package description
+    * **[UPDATE]** Enhance documentation
 
 * ## [0.4.6]
     * **[FIX]** Inconsisten naming on source code & documentation
@@ -76,7 +83,7 @@
     * **[FIX]** Someline on documention files.
 
 * ## [0.2.0]
-    * **[OPTIMIZE]** Change `meta` package into `foundation` package.
+    * **[OPTIMIZE]** UPDATE `meta` package into `foundation` package.
 
 ---
 

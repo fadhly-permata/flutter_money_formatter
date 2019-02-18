@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   ListTile(
                     title: Text('FormattedLeftSymbolCustom :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(symbol: 'IDR', spaceBetweenSymbolAndNumber: false).formattedLeftSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').formattedLeftSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('CompactNonSymbol :', style: titleStyle,),
