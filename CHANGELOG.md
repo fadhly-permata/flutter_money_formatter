@@ -1,14 +1,16 @@
 # Version 0.5.*
+* ## [0.5.3]
+    * **[FIX]** CHANGELOG format
 
-* ## 0.5.2
-    * [FIX] Fix missing tags on documentation
-    * [ADD] License notice on library
-    * [ADD] `library` tag on header
+* ## [0.5.2]
+    * **[FIX]** Fix missing tags on documentation
+    * **[ADD]** License notice on library
+    * **[ADD]** `library` tag on header
 
-* ## 0.5.1
-    * [UPDATE] Update documentation
+* ## [0.5.1]
+    * **[UPDATE]** Update documentation
 
-* ## 0.5.0
+* ## [0.5.0]
     * **[FIX]** Compact form as [described here](https://github.com/fadhly-permata/flutter_money_formatter/issues/1)
     * **[DEPRECATED]** CompactFormatCase.
     * **[UPDATE]** Update documentation.
@@ -18,32 +20,32 @@
 
 # Version 0.4.*
 
-* ## 0.4.8+1
+* ## [0.4.8+1]
     * **[REFIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
 
-* ## 0.4.8
+* ## [0.4.8]
     * **[FIX]** Remove unsopported documentation tag for [pub.dartlang.org](https://pub.dartlang.org/)
 
-* ## 0.4.7
+* ## [0.4.7]
     * **[CHANGE]** Package description
     * **[CHANGE]** Enhance documentation
 
-* ## 0.4.6
+* ## [0.4.6]
     * **[FIX]** Inconsisten naming on source code & documentation
 
-* ## 0.4.5
+* ## [0.4.5]
     * **[FIX]** Documentation for method name changes.
 
-* ## 0.4.2
+* ## [0.4.2]
     * **[UPDATE]** Revise license note.
 
 
-* ## 0.4.1
+* ## [0.4.1]
     * **[ADD]** Compact format support
     * **[ADD]** Version badges on documentation
 
 
-* ## 0.4.0
+* ## [0.4.0]
     * **[ADD]** Compact format support.
     * **[UPDATE]** Update documentation.
 
@@ -51,10 +53,10 @@
 
 # Version 0.3.*
 
-* ## 0.3.1
+* ## [0.3.1]
     * **[ADD]** Some badges on documentation
 
-* ## 0.3.0
+* ## [0.3.0]
     * **[UPDATE]** Documentation
     * **[ADD]** Compare methods:
         - `isLowerThan`
