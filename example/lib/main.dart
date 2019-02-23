@@ -22,6 +22,8 @@ class _MyAppState extends State<MyApp> {
       amount: 12345678.9012345
     );
 
+    MoneyFormatterOutput fo = fmf.output;
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -37,47 +39,51 @@ class _MyAppState extends State<MyApp> {
                 children: <Widget>[
                   ListTile(
                     title: Text('FormattedNonSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.formattedNonSymbol, style: subtitleStyle,),
+                    subtitle: Text(fo.nonSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('FormattedLeftSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.formattedLeftSymbol, style: subtitleStyle,),
+                    subtitle: Text(fo.symbolOnLeft, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('FormattedRightSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.formattedRightSymbol, style: subtitleStyle,),
+                    subtitle: Text(fo.symbolOnRight, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('FormattedWithoutDecimal :', style: titleStyle,),
-                    subtitle: Text(fmf.withoutDecimal, style: subtitleStyle,),
+                    subtitle: Text(fo.withoutFractionDigits, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('DecimalOnly :', style: titleStyle,),
-                    subtitle: Text(fmf.fractionDigitsOnly, style: subtitleStyle,),
+                    subtitle: Text(fo.fractionDigitsOnly, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('FormattedNonSymbolCustom :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(amount: 123.4567, fractionDigits: 2).formattedNonSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 123.4567, fractionDigits: 4).output.nonSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('FormattedLeftSymbolCustom :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').formattedLeftSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').output.symbolOnLeft, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('CompactNonSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(amount: 12345678987654321.9012345).compactNonSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 12345678987654321.9012345).output.compactNonSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('CompactLongNonSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(amount: 12345678987654321.9012345, compactFormatType: CompactFormatType.long).compactNonSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 12345678987654321.9012345, compactFormatType: CompactFormatType.long).output.compactNonSymbol, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('CompactLeftSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(amount: 1234.56789).compactLeftSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 1234.56789).output.compactSymbolOnLeft, style: subtitleStyle,),
                   ),
                   ListTile(
                     title: Text('CompactRightSymbol :', style: titleStyle,),
-                    subtitle: Text(fmf.copyWith(amount: 123456.7890, compactFormatType: CompactFormatType.sort).compactRightSymbol, style: subtitleStyle,),
+                    subtitle: Text(fmf.copyWith(amount: 123456.7890, compactFormatType: CompactFormatType.sort).output.compactSymbolOnRight, style: subtitleStyle,),
+                  ),
+                  ListTile(
+                    title: Text('Compare IsEqual (=)', style: titleStyle,),
+                    subtitle: Text('${fmf.comparator.isEqual(5000)}', style: subtitleStyle,),
                   )
                 ],
               ),

@@ -11,7 +11,7 @@
 [![intl](https://img.shields.io/pub/vpre/intl.svg?label=intl&colorA=gray&colorB=green&style=plastic)](https://pub.dartlang.org/packages/intl)
 
 
-----
+---
 
 
 ## Install
@@ -34,7 +34,9 @@ To be able to format your `double` value into the various formats you want, you 
 
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(
+    amount: 12345678.9012345
+);
 ```
 
 > Note, the code above still uses the default configuration as [explained here](#configurations).
@@ -43,47 +45,98 @@ After that you can request various results of the format as follows:
 
 ```dart
 // normal form
-print(fmf.formattedNonSymbol); // 12,345,678.90
-print(fmf.formattedLeftSymbol); // $12,345,678.90
-print(fmf.formattedRightSymbol); // 12,345,678.90$
-print(fmf.fractionDigitsOnly); // 90
-print(fmf.withoutDecimal); // 12,345,678
+print(fmf.output.formattedNonSymbol); // 12,345,678.90
+print(fmf.output.formattedLeftSymbol); // $12,345,678.90
+print(fmf.output.formattedRightSymbol); // 12,345,678.90$
+print(fmf.output.fractionDigitsOnly); // 90
+print(fmf.output.withoutDecimal); // 12,345,678
 
 // compact form
-print(fmf.compactNonSymbol) // 12.3M
-print(fmf.compactLeftSymbol) // $12.3M
-print(fmf.compactRightSymbol) // 12.3M$
+print(fmf.output.compactNonSymbol) // 12.3M
+print(fmf.output.compactLeftSymbol) // $12.3M
+print(fmf.output.compactRightSymbol) // 12.3M$
 ```
 
-See [demo section](#demo) to get more info. 
+If you will use the output format several times, I strongly recommend that you initialize a variable as in the following example:
+
+```dart
+MoneyFormatterOutput fo = fmf.output;
+```
+
+Or directly when initializing the `FlutterMoneyFormatter` instance as in the following example:
+
+```dart
+MoneyFormatterOutput fo = FlutterMoneyFormatter(
+    amount: 12345678.9012345
+).output;
+```
+
+So you can immediately take the value more easily as in the following example:
+
+```dart
+// normal form
+print(fo.formattedNonSymbol); // 12,345,678.90
+print(fo.formattedLeftSymbol); // $12,345,678.90
+print(fo.formattedRightSymbol); // 12,345,678.90$
+print(fo.fractionDigitsOnly); // 90
+print(fo.withoutDecimal); // 12,345,678
+
+// compact form
+print(fo.compactNonSymbol) // 12.3M
+print(fo.compactLeftSymbol) // $12.3M
+print(fo.compactRightSymbol) // 12.3M$
+```
+
+See [demo section](#demo) to get more info.
 
 ## Configurations
 
-To adjust the format to suit your needs, you can use my favorite notation way:
+To adjust the format to suit your needs, you can set it through the `settings` parameter:
 
 ```dart
-FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(amount: 12345678.9012345)
-    ..symbol = 'IDR'
-    ..thousandSeparator = '.'
-    ..decimalSeparator = ','
-    ..fractionDigits = 3
-    ..symbolAndNumberSeparator = '-';
+FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(
+    amount: 12345678.9012345,
+    settings: MoneyFormatterSettings(
+        symbol: 'IDR',
+        thousandSeparator: '.',
+        decimalSeparator: ',',
+        symbolAndNumberSeparator: ' ',
+        fractionDigits: 3,
+        compactFormatType: CompactFormatType.sort
+    )
+)
 ```
 
-Of course, you don't need to change the whole properties like on above sample. By default the properties have the default values as follows:
+Of course you are not required to initialize the entire configuration in the `settings` (`MoneyFormatterSettings`) parameter as in the example above. You can change one or more of the configurations above. This is because each configuration above is not mandatory and has a default value.
+
+---
+
+## Properties, Methods, and Functions
+
+- ## `FlutterMoneyFormatter`
+
+| Property Names    | Data Type                 | Descriptions |
+| ----------------- | ------------------------- | ------------ |
+| `amount`          | `double`                  | Amount number that will be formatted. |
+| `settings`        | `MoneyFormatterSettings`  | [See here.](#MoneyFormatterSettings) |
+| `output`          | `MoneyFormatterOutput`    | [See here.](#MoneyFormatterOutput) |
+| `comparator`      | `MoneyFormatterCompare`   | [See here.](#MoneyFormatterCompare) |
+| `CopyWith`        | `FlutterMoneyFormatter`   | [see here](#duplicating-instance) |
 
 
-| Configuration Property        | Data Type                                 | Default Value                 | Description   |
-| ----------------------------- | ----------------------------------------- | ----------------------------- | ------------- |
-| `symbol`                      | `String`                                  | `$` (Dollar Sign)             | The symbol that will be used on formatted output. |
-| `thousandSeparator`           | `String`                                  | `,`                           | The character that will be used as thousand separator on formatted output. |
-| `decimalSeparator`            | `String`                                  | `.`                           | The character that will be used as decimal separator on formatted output. |
-| `fractionDigits`              | `int`                                     | `2`                           | The fraction digits that will be used on formatted output. |
-| `symbolAndNumberSeparator`    | `String`                                  | `' '` (Space)                 | If the value is [true] then formatted output will shown space between the number and the currency symbol. |
-| `compactFormatType`           | [CompactFormatType](#CompactFormatType)   | `CompactFormatType.sort`      | Compact format type, sort or long type. |
+- ## `MoneyFormatterSettings`
+
+| Configuration Property        | Data Type             | Default Value             | Description   |
+| ----------------------------- | --------------------- | ------------------------- | ------------- |
+| `symbol`                      | `String`              | `$` (Dollar Sign)         | The symbol that will be used on formatted output. |
+| `thousandSeparator`           | `String`              | `,`                       | The character that will be used as thousand separator on formatted output. |
+| `decimalSeparator`            | `String`              | `.`                       | The character that will be used as decimal separator on formatted output. |
+| `fractionDigits`              | `int`                 | `2`                       | The fraction digits that will be used on formatted output. |
+| `symbolAndNumberSeparator`    | `String`              | `' '` (Space)             | The character that will be used as separator between formatted number and currency symbol. |
+| `compactFormatType`           | `CompactFormatType`   | `CompactFormatType.sort`  | [See here.](#CompactFormatType) |
 
 
-## CompactFormatType
+- ## CompactFormatType
 
 You can change the type of compact format like for million using `M` or `million`, or trillion using `T` or `trillion`. and so on. This type only supports two type as described below:
 
@@ -93,20 +146,22 @@ You can change the type of compact format like for million using `M` or `million
 | `CompactFormatType.long`      | Used to make the compact format displayed using long text. |
 
 
-## Duplicating Instance
+- ## `MoneyFormatterOutput`
 
-For some reasons, you may need to duplicate the `instance` and just need to change some configurations. To do that, you can use the `copyWith` method as below:
+You can use formats that match your needs through properties found in the `MoneyFormatterOutput` instance.
 
-```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345)
+| Property Names            | Data Type | Descriptions |
+| ------------------------- | --------- | ------------ |
+| `nonSymbol`               | `String`  | The results of the format of the currency are normal and without a currency symbol. Example: 12,345,678.90 |
+| `symbolOnLeft`            | `String`  | The results of the normal currency format and with currency symbols are on the left. Example: $ 12,345,678.90 |
+| `symbolOnRight`           | `String`  | The results of the normal currency format and with currency symbols are on the right. Example: 12,345,678.90 $ |
+| `compactNonSymbol`        | `String`  | The results of the currency format are compact and without a currency symbol. Example: 12.3M |
+| `compactSymbolOnLeft`     | `String`  | The results of the currency format are compact and with currency symbols on the left. example: $ 12.3M |
+| `compactSymbolOnRight`    | `String`  | The results of the currency format are compact and with currency symbols on the right. example: 12.3M $ |
+| `fractionDigitsOnly`      | `String`  | Only give the fraction value. Example: 90 |
+| `withoutFractionDigits`   | `String`  | Give a value without fractions. Example: 12,345,678 |
 
-print(fmf.formattedLeftSymbol); // $ 12,345,678.90
-print(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').formattedLeftSymbol); // IDR-12,345,678.90
-```
-
----
-
-## Complete Methods
+- ## `MoneyFormatterCompare`
 
 | Method                    | Parameter         | Descriptions |
 | ------------------------- | ----------------- | ------------ |
@@ -115,15 +170,43 @@ print(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').formattedLeftSy
 | `isEqual`                 | `amount`          | Check current instance amount is equal than [amount] or not. |
 | `isEqualOrLowerThan`      | `amount`          | Check current instance amount is equal or lower than [amount] or not. |
 | `isEqualOrGreaterThan`    | `amount`          | Check current instance amount is equal or greater than [amount] or not. |
-| `CopyWith`                | [see here](#configurations) | [see here](#duplicating-instance) |
+
+Example of using a comparator:
+
+```dart
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
+double comparerValue = 5678.9012;
+
+print(fmf.comparator.isEqual(5678.9012)); // false
+print(fmf.comparator.isGreaterThan(5678.9012)); // true
+```
+
+---
+
+## Duplicating Instance
+
+For some reasons, you may need to duplicate the `instance` and just need to change some configurations. To do that, you can use the `copyWith` method as below:
+
+```dart
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
+
+print(fmf.output.formattedLeftSymbol); // $ 12,345,678.90
+print(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').output.formattedLeftSymbol); // IDR-12,345,678.90
+```
+
+---
 
 ## Demo
 
 For more complete samples, you can grab it from the [example directory](https://github.com/fadhly-permata/flutter_money_formatter/tree/master/example).
 
+## Our Other Package
+
+See our [other packages here](https://pub.dartlang.org/flutter/packages?q=email%3Afadhly.permata%40gmail.com).
+
 ## Help Me
 
-If you find an issue, bug, question, or want to request a new feature you can [do it here](https://github.com/fadhly-permata/flutter_money_formatter/issues). You can also help me to improve features or fix some issues by [forking this project via Github](https://github.com/fadhly-permata/flutter_money_formatter)
+If you find any issues, bugs, have questions, or want to request a new features you can [do it here](https://github.com/fadhly-permata/flutter_money_formatter/issues). You can also help me to improve features or fix some issues by [forking this project via Github](https://github.com/fadhly-permata/flutter_money_formatter)
 
 
 ## ChangeLog

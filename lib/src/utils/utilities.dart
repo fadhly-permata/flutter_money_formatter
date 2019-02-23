@@ -33,10 +33,34 @@
 /// pub     : https://pub.dartlang.org/packages/flutter_money_formatter
 /// ================================================================================= 
 
-library flutter_money_formatter;
+part of '../flutter_money_formatter_base.dart';
+class _Utilities {
+  _Utilities({@required this.amount, this.settings}) {
+    this.settings = settings ?? MoneyFormatterSettings();
+  }
 
-export 'package:flutter_money_formatter/src/utils/compact_format_type.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_settings.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_output.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_compare.dart';
-export 'package:flutter_money_formatter/src/flutter_money_formatter_base.dart';
+  double amount;
+
+  MoneyFormatterSettings settings; 
+
+  /// Returns formatted number
+  String get baseFormat =>
+      NumberFormat.currency(symbol: '', decimalDigits: this.settings.fractionDigits)
+          .format(amount);
+
+  /// Returns formatted number with refined separator chars
+  String get refineSeparator => baseFormat
+      .replaceAll(',', '(,)')
+      .replaceAll('.', '(.)')
+      .replaceAll('(,)', this.settings.thousandSeparator)
+      .replaceAll('(.)', this.settings.decimalSeparator);
+
+  /// Returns spacer as `spaceBetweenSymbolAndNumber` value
+  String get spacer => this.settings.symbolAndNumberSeparator;
+
+  /// Returns base compact format
+  NumberFormat get baseCompact => this.settings.compactFormatType == CompactFormatType.sort
+      ? NumberFormat.compact()
+      : NumberFormat.compactLong();
+
+}

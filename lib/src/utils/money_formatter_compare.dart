@@ -33,10 +33,30 @@
 /// pub     : https://pub.dartlang.org/packages/flutter_money_formatter
 /// ================================================================================= 
 
-library flutter_money_formatter;
+import 'package:flutter/foundation.dart';
 
-export 'package:flutter_money_formatter/src/utils/compact_format_type.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_settings.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_output.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_compare.dart';
-export 'package:flutter_money_formatter/src/flutter_money_formatter_base.dart';
+/// [MoneyFormatterCompare] instance.
+/// 
+/// This instance is used to hold utilities in comparing values held by [FlutterMoneyFormatter]
+class MoneyFormatterCompare {
+  MoneyFormatterCompare({
+    @required this.amount
+  });
+
+  final double amount;
+
+  /// Check current instance amount is lower than [amount] or not
+  bool isLowerThan(double amount) => this.amount < amount;
+
+  /// Check current instance amount is greater than [amount] or not
+  bool isGreaterThan(double amount) => this.amount > amount;
+
+  /// Check current instance amount is equal than [amount] or not
+  bool isEqual(double amount) => this.amount == amount;
+
+  /// Check current instance amount is equal or lower than [amount] or not
+  bool isEqualOrLowerThan(double amount) => this.amount <= amount;
+
+  /// Check current instance amount is equal or greater than [amount] or not
+  bool isEqualOrGreaterThan(double amount) => this.amount >= amount;
+}

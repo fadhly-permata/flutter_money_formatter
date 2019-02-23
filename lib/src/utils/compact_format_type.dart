@@ -33,10 +33,6 @@
 /// pub     : https://pub.dartlang.org/packages/flutter_money_formatter
 /// ================================================================================= 
 
-library flutter_money_formatter;
 
-export 'package:flutter_money_formatter/src/utils/compact_format_type.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_settings.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_output.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_compare.dart';
-export 'package:flutter_money_formatter/src/flutter_money_formatter_base.dart';
+/// An enum to be used on compact text format
+enum CompactFormatType { sort, long }

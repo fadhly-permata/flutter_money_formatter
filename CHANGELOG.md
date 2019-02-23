@@ -1,7 +1,21 @@
+# Version 0.6.*
+
+* ## [0.6.0]
+    Be careful, this version has a lot of changes. After updating this version makes your application need to be revised as well.
+
+    * **[CHANGES]**
+        - Classified settings, output, and comparator, see documentation for more information.
+        - Update documentation to match with current version.
+        - Changing the license from the MIT license becomes a BSD license.
+        - License notes on each file.
+        - Code improvements.
+
+---
+
 # Version 0.5.*
 
 * ## [0.5.4]
-    * **[DEPRECATED]** `spaceBetweenSymbolAndNumber` is deprecated and UPDATEd with `symbolAndNumberSeparator`
+    * **[DEPRECATED]** `spaceBetweenSymbolAndNumber` is deprecated and updated with `symbolAndNumberSeparator`
     * **[ADD]** `symbolAndNumberSeparator` with `String` data type.
     * **[UPDATE]** documentation to match with the library capability.
     * **[UPDATE]** Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/).

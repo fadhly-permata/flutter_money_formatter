@@ -33,10 +33,44 @@
 /// pub     : https://pub.dartlang.org/packages/flutter_money_formatter
 /// ================================================================================= 
 
-library flutter_money_formatter;
+import 'package:flutter/foundation.dart';
 
-export 'package:flutter_money_formatter/src/utils/compact_format_type.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_settings.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_output.dart';
-export 'package:flutter_money_formatter/src/utils/money_formatter_compare.dart';
-export 'package:flutter_money_formatter/src/flutter_money_formatter_base.dart';
+/// [MoneyFormatterOutput] instance. 
+/// 
+/// This instance will be used as [FlutterMoneyFormatter] output container. So you can take whatever format 
+/// you need from this instance.  
+class MoneyFormatterOutput {
+  /// Init instance of [MoneyFormatterOutput]
+  MoneyFormatterOutput({
+    @required this.nonSymbol,
+    @required this.symbolOnLeft,
+    @required this.symbolOnRight,
+
+    @required this.compactNonSymbol,
+    @required this.compactSymbolOnLeft,
+    @required this.compactSymbolOnRight,
+
+    @required this.fractionDigitsOnly,
+    @required this.withoutFractionDigits
+  });
+
+
+  /// Returns formatted number without currency symbol
+  final String nonSymbol;
+  /// Returns formatted number with currency symbol on the left side.
+  final String symbolOnLeft;
+  /// Returns formatted number with currency symbol on the right side.
+  final String symbolOnRight;
+
+  /// Returns compact format number without currency symbol
+  final String compactNonSymbol;
+  /// Returns compact format number with currency symbol on the left side.
+  final String compactSymbolOnLeft;
+  /// Returns compact format number with currency symbol on the right side.
+  final String compactSymbolOnRight;
+
+  /// Returns decimal-only with length as specified on fractionDigits.
+  final String fractionDigitsOnly;
+  /// Returns formatted number without decimal.
+  final String withoutFractionDigits;
+}
