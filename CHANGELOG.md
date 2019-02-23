@@ -1,5 +1,9 @@
 # Version 0.6.*
 
+* ## [0.6.1]
+    * **[UPDATE]**
+        - Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/).
+
 * ## [0.6.0]
     Be careful, this version has a lot of changes. After updating this version makes your application need to be revised as well.
 
