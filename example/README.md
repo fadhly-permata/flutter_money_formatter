@@ -46,15 +46,15 @@ After that you can request various results of the format as follows:
 ```dart
 // normal form
 print(fmf.output.formattedNonSymbol); // 12,345,678.90
-print(fmf.output.formattedLeftSymbol); // $12,345,678.90
-print(fmf.output.formattedRightSymbol); // 12,345,678.90$
+print(fmf.output.formattedLeftSymbol); // $ 12,345,678.90
+print(fmf.output.formattedRightSymbol); // 12,345,678.90 $
 print(fmf.output.fractionDigitsOnly); // 90
 print(fmf.output.withoutDecimal); // 12,345,678
 
 // compact form
 print(fmf.output.compactNonSymbol) // 12.3M
-print(fmf.output.compactLeftSymbol) // $12.3M
-print(fmf.output.compactRightSymbol) // 12.3M$
+print(fmf.output.compactLeftSymbol) // $ 12.3M
+print(fmf.output.compactRightSymbol) // 12.3M $
 ```
 
 If you will use the output format several times, I strongly recommend that you initialize a variable as in the following example:
@@ -76,15 +76,15 @@ So you can immediately take the value more easily as in the following example:
 ```dart
 // normal form
 print(fo.formattedNonSymbol); // 12,345,678.90
-print(fo.formattedLeftSymbol); // $12,345,678.90
-print(fo.formattedRightSymbol); // 12,345,678.90$
+print(fo.formattedLeftSymbol); // $ 12,345,678.90
+print(fo.formattedRightSymbol); // 12,345,678.90 $
 print(fo.fractionDigitsOnly); // 90
 print(fo.withoutDecimal); // 12,345,678
 
 // compact form
 print(fo.compactNonSymbol) // 12.3M
-print(fo.compactLeftSymbol) // $12.3M
-print(fo.compactRightSymbol) // 12.3M$
+print(fo.compactLeftSymbol) // $ 12.3M
+print(fo.compactRightSymbol) // 12.3M $
 ```
 
 See [demo section](#demo) to get more info.
