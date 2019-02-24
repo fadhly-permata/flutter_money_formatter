@@ -177,8 +177,8 @@ Example of using a comparator:
 FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
 double comparerValue = 5678.9012;
 
-print(fmf.comparator.isEqual(5678.9012)); // false
-print(fmf.comparator.isGreaterThan(5678.9012)); // true
+print(fmf.comparator.isEqual(comparerValue)); // false
+print(fmf.comparator.isGreaterThan(comparerValue)); // true
 ```
 
 ---

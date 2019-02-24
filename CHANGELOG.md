@@ -1,5 +1,10 @@
 # Version 0.6.*
 
+* ## [0.6.3]
+    * **[FIX]**
+        - Fix header license to support https://pub.dartlang.org/documentation.
+        - Fix miss type documentation data.
+
 * ## [0.6.2]
     * **[UPDATE]**
         - License badge on documentation.
