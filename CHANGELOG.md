@@ -1,5 +1,9 @@
 # Version 0.6.*
 
+* ## [0.6.2]
+    * **[UPDATE]**
+        - License badge on documentation.
+
 * ## [0.6.1]
     * **[UPDATE]**
         - Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/).
