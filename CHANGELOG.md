@@ -1,5 +1,10 @@
 # Version 0.7.*
 
+* ## [0.7.1]
+    * **[UPDATES]**
+        - Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/). 
+s
+
 * ## [0.7.0]
     * **[FIX]**
         - `fractionDigitsOnly` bugs when using custom decimal symbol.
