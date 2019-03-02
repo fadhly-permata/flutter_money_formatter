@@ -67,8 +67,8 @@ class FlutterMoneyFormatter {
             '${this.settings.symbol}${_utilities.spacer}$_compactNonSymbol',
         compactSymbolOnRight:
             '$_compactNonSymbol${_utilities.spacer}${this.settings.symbol}',
-        fractionDigitsOnly: _urs.substring(_urs.indexOf('.') + 1),
-        withoutFractionDigits: _urs.substring(0, _urs.indexOf('.')));
+        fractionDigitsOnly: _urs.substring(_urs.indexOf(this.settings.decimalSeparator)),
+        withoutFractionDigits: _urs.substring(0, _urs.indexOf(this.settings.decimalSeparator)));
 
     comparator = MoneyFormatterCompare(amount: this.amount);
   }

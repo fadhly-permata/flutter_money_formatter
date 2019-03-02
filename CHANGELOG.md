@@ -1,3 +1,16 @@
+# Version 0.7.*
+
+* ## [0.7.0]
+    * **[FIX]**
+        - `fractionDigitsOnly` bugs when using custom decimal symbol.
+        - `withoutFractionDigits` bugs when using custom decimal symbol.
+        - Fix typo on documentation
+    
+    * **[ADD]**
+        - Add license info on documentation
+
+---
+
 # Version 0.6.*
 
 * ## [0.6.3]
