@@ -12,7 +12,7 @@
 
 
 ### Screenshot
-![screenshot](/doc/fmf.gif)
+![screenshot](doc/fmf.gif)
 
 ---
 

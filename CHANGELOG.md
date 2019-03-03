@@ -1,5 +1,9 @@
 # Version 0.7.*
 
+* ## [0.7.3]
+    * **[FIX]**
+        - Fix broken image on [pub.dartlang.org](https://pub.dartlang.org/) documentation.
+
 * ## [0.7.2]
     * **[FIX]**
         - [Issue](https://github.com/fadhly-permata/flutter_money_formatter/issues/4).
