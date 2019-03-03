@@ -1,9 +1,16 @@
 # Version 0.7.*
 
+* ## [0.7.2]
+    * **[FIX]**
+        - [Issue](https://github.com/fadhly-permata/flutter_money_formatter/issues/4).
+
+    * **[ADD]**
+        - Screenshot on documentation
+
 * ## [0.7.1]
     * **[UPDATES]**
-        - Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/). 
-s
+        - Formatting source code as suggested by [pub.dartlang.org](https://pub.dartlang.org/).
+
 
 * ## [0.7.0]
     * **[FIX]**

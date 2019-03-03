@@ -68,7 +68,7 @@ class FlutterMoneyFormatter {
         compactSymbolOnRight:
             '$_compactNonSymbol${_utilities.spacer}${this.settings.symbol}',
         fractionDigitsOnly:
-            _urs.substring(_urs.indexOf(this.settings.decimalSeparator)),
+            _urs.substring(_urs.indexOf(this.settings.decimalSeparator) + 1),
         withoutFractionDigits:
             _urs.substring(0, _urs.indexOf(this.settings.decimalSeparator)));
 
