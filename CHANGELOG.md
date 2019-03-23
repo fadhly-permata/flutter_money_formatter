@@ -1,3 +1,15 @@
+# Version 0.8.*
+
+* ## [0.8.0]
+    * **[ADD]**
+        - `fastCalc` method
+
+    * **[UPDATES]**
+        - fix miss-type on `CompactFormatType.sort`
+        - Update documentations
+
+---
+
 # Version 0.7.*
 
 * ## [0.7.3]

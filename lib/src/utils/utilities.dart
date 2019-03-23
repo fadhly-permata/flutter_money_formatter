@@ -38,6 +38,15 @@
 
 part of '../flutter_money_formatter_base.dart';
 
+enum FastCalcType {
+  addition,
+  substraction,
+  multiplication,
+  division,
+  percentageAddition,
+  percentageSubstraction
+}
+
 class _Utilities {
   _Utilities({@required this.amount, this.settings}) {
     this.settings = settings ?? MoneyFormatterSettings();
@@ -64,7 +73,7 @@ class _Utilities {
 
   /// Returns base compact format
   NumberFormat get baseCompact =>
-      this.settings.compactFormatType == CompactFormatType.sort
+      this.settings.compactFormatType == CompactFormatType.short
           ? NumberFormat.compact()
           : NumberFormat.compactLong();
 }

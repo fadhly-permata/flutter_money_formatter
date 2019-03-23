@@ -56,7 +56,7 @@ class MoneyFormatterSettings {
     this.decimalSeparator = this.decimalSeparator ?? '.';
     this.symbolAndNumberSeparator = this.symbolAndNumberSeparator ?? ' ';
     this.fractionDigits = this.fractionDigits ?? 2;
-    this.compactFormatType = this.compactFormatType ?? CompactFormatType.sort;
+    this.compactFormatType = this.compactFormatType ?? CompactFormatType.short;
   }
 
   /// The [symbol] that will be used on formatted output, default value is $ (Dollar Sign)

@@ -44,7 +44,7 @@ FlutterMoneyFormatter fmf = FlutterMoneyFormatter(
 
 > Note, the code above still uses the default configuration as [explained here](#configurations).
 
-After that you can request various results of the format as follows:
+After that, you can request various results of the format as follows:
 
 ```dart
 // normal form
@@ -78,11 +78,11 @@ So you can immediately take the value more easily as in the following example:
 
 ```dart
 // normal form
-print(fo.formattedNonSymbol); // 12,345,678.90
-print(fo.formattedLeftSymbol); // $ 12,345,678.90
-print(fo.formattedRightSymbol); // 12,345,678.90 $
+print(fo.nonSymbol); // 12,345,678.90
+print(fo.symbolOnLeft); // $ 12,345,678.90
+print(fo.symbolOnRight); // 12,345,678.90 $
 print(fo.fractionDigitsOnly); // 90
-print(fo.withoutDecimal); // 12,345,678
+print(fo.withoutFractionDigits); // 12,345,678
 
 // compact form
 print(fo.compactNonSymbol) // 12.3M
@@ -124,7 +124,8 @@ Of course you are not required to initialize the entire configuration in the `se
 | `settings`        | `MoneyFormatterSettings`  | [See here.](#MoneyFormatterSettings) |
 | `output`          | `MoneyFormatterOutput`    | [See here.](#MoneyFormatterOutput) |
 | `comparator`      | `MoneyFormatterCompare`   | [See here.](#MoneyFormatterCompare) |
-| `CopyWith`        | `FlutterMoneyFormatter`   | [see here](#duplicating-instance) |
+| `copyWith`        | `FlutterMoneyFormatter`   | [see here](#duplicating-instance) |
+| `fastCalc`        | `FlutterMoneyFormatter`   | [see here](#FastCalc) |
 
 
 - ## `MoneyFormatterSettings`
@@ -136,7 +137,7 @@ Of course you are not required to initialize the entire configuration in the `se
 | `decimalSeparator`            | `String`              | `.`                       | The character that will be used as decimal separator on formatted output. |
 | `fractionDigits`              | `int`                 | `2`                       | The fraction digits that will be used on formatted output. |
 | `symbolAndNumberSeparator`    | `String`              | `' '` (Space)             | The character that will be used as separator between formatted number and currency symbol. |
-| `compactFormatType`           | `CompactFormatType`   | `CompactFormatType.sort`  | [See here.](#CompactFormatType) |
+| `compactFormatType`           | `CompactFormatType`   | `CompactFormatType.short` | [See here.](#CompactFormatType) |
 
 
 - ## CompactFormatType
@@ -145,7 +146,7 @@ You can change the type of compact format like for million using `M` or `million
 
 | Value                         | Description |
 | ----------------------------- | ---------- |
-| `CompactFormatType.sort`      | Used to make the compact format displayed using sort text. |
+| `CompactFormatType.short`     | Used to make the compact format displayed using short text. |
 | `CompactFormatType.long`      | Used to make the compact format displayed using long text. |
 
 
@@ -182,7 +183,55 @@ double comparerValue = 5678.9012;
 
 print(fmf.comparator.isEqual(comparerValue)); // false
 print(fmf.comparator.isGreaterThan(comparerValue)); // true
+
 ```
+
+---
+
+## FastCalc
+
+`fastCalc` is a function that can be used to perform various fast calculation processes that you might need. In implementing it, the `fastCalc` function gives the output of a` FlutterMoneyFormatter` instance so you can perform several calculation functions at once with the chaining method.
+
+**Function**:
+
+```dart
+FlutterMoneyFormatter fastCalc({
+    @required FastCalcType type, 
+    @required double amount
+})
+```
+
+**Implementation**:
+
+```dart
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345.678);
+fmf.fastCalc(type: FastCalcType.addition, amount: 1.111);
+fmf.fastCalc(type: FastCalcType.substraction, amount: 2.222);
+
+print(fmf.output.nonSymbol); // 12,345.68
+```
+
+Because it supports the chaining process, the example above can be shortened as follows:
+
+```dart
+FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345.678)
+    .fastCalc(type: FastCalcType.addition, amount: 1.111)
+    .fastCalc(type: FastCalcType.substraction, amount: 2.222);
+
+print(fmf.output.nonSymbol);  // 12,345.68
+```
+
+The `type` parameter used by the `fastCalc` function has the `FastCalcType` data type which is an enum. The following table is an explanation for the `FastCalcType` enum:
+
+| Index | Name                      | Description |
+| ----- | ------------------------- | ----------- |
+| 0     | addition                  | Used to do addition calculations. |
+| 1     | substraction              | Used to do substraction calculations. |
+| 2     | multiplication            | Used to do multiplication calculations. |
+| 3     | division                  | Used to do division calculations. |
+| 4     | percentageAddition        | Used to do the addition calculations base on percentage. |
+| 5     | percentageSubstraction    | Used to do the substraction calculations base on percentage. |
+
 
 ---
 
@@ -209,8 +258,7 @@ See our [other packages here](https://pub.dartlang.org/flutter/packages?q=email%
 
 ## Help Me
 
-If you find any issues, bugs, have questions, or want to request a new features you can [do it here](https://github.com/fadhly-permata/flutter_money_formatter/issues). You can also help me to improve features or fix some issues by [forking this project via Github](https://github.com/fadhly-permata/flutter_money_formatter)
-
+If you find some issues or bugs, please [report here.](https://github.com/fadhly-permata/flutter_money_formatter/issues/new?assignees=&labels=&template=bug_report.md&title=) You can also help in [requesting new features here.](https://github.com/fadhly-permata/flutter_money_formatter/issues/new?assignees=&labels=&template=feature_request.md&title=)
 
 ## ChangeLog
 
@@ -218,7 +266,7 @@ Are you curious about the changes that occur in each version? [See here for deta
 
 
 ## LICENSE
-```
+```text
 Copyright (c) 2019, Fadhly Permata <fadhly.permata@gmail.com>
 All rights reserved.
 

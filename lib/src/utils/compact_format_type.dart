@@ -37,4 +37,4 @@
 /// ---
 
 /// An enum to be used on compact text format
-enum CompactFormatType { sort, long }
+enum CompactFormatType { short, long }

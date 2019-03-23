@@ -55,23 +55,7 @@ class FlutterMoneyFormatter {
   /// [amount] (@required) the number that will be formatted
   FlutterMoneyFormatter({@required this.amount, this.settings}) {
     this.settings = settings ?? MoneyFormatterSettings();
-    _utilities = _Utilities(amount: this.amount, settings: this.settings);
-
-    String _urs = _utilities.refineSeparator;
-    output = MoneyFormatterOutput(
-        nonSymbol: _urs,
-        symbolOnLeft: '${this.settings.symbol}${_utilities.spacer}$_urs',
-        symbolOnRight: '$_urs${_utilities.spacer}${this.settings.symbol}',
-        compactNonSymbol: _compactNonSymbol,
-        compactSymbolOnLeft:
-            '${this.settings.symbol}${_utilities.spacer}$_compactNonSymbol',
-        compactSymbolOnRight:
-            '$_compactNonSymbol${_utilities.spacer}${this.settings.symbol}',
-        fractionDigitsOnly:
-            _urs.substring(_urs.indexOf(this.settings.decimalSeparator) + 1),
-        withoutFractionDigits:
-            _urs.substring(0, _urs.indexOf(this.settings.decimalSeparator)));
-
+    output = _getOutput();
     comparator = MoneyFormatterCompare(amount: this.amount);
   }
 
@@ -86,6 +70,61 @@ class FlutterMoneyFormatter {
 
   /// Comparator
   MoneyFormatterCompare comparator;
+
+  /// output builder
+  MoneyFormatterOutput _getOutput() {
+    _utilities = _Utilities(amount: this.amount, settings: this.settings);
+
+    String _urs = _utilities.refineSeparator;
+    return MoneyFormatterOutput(
+        nonSymbol: _urs,
+        symbolOnLeft: '${this.settings.symbol}${_utilities.spacer}$_urs',
+        symbolOnRight: '$_urs${_utilities.spacer}${this.settings.symbol}',
+        compactNonSymbol: _compactNonSymbol,
+        compactSymbolOnLeft:
+            '${this.settings.symbol}${_utilities.spacer}$_compactNonSymbol',
+        compactSymbolOnRight:
+            '$_compactNonSymbol${_utilities.spacer}${this.settings.symbol}',
+        fractionDigitsOnly:
+            _urs.substring(_urs.indexOf(this.settings.decimalSeparator) + 1),
+        withoutFractionDigits:
+            _urs.substring(0, _urs.indexOf(this.settings.decimalSeparator)));
+  }
+
+  /// returns FlutterMoneyFormatter after calculating amount.
+  FlutterMoneyFormatter fastCalc(
+      {@required FastCalcType type, @required double amount}) {
+    switch (type) {
+      case FastCalcType.addition:
+        this.amount += amount;
+        break;
+
+      case FastCalcType.substraction:
+        this.amount -= amount;
+        break;
+
+      case FastCalcType.multiplication:
+        this.amount *= amount;
+        break;
+
+      case FastCalcType.division:
+        this.amount /= amount;
+        break;
+
+      case FastCalcType.percentageAddition:
+        this.amount += (amount / 100) * this.amount;
+        break;
+
+      case FastCalcType.percentageSubstraction:
+        this.amount -= (amount / 100) * this.amount;
+        break;
+
+      default:
+        throw "Unknown calculation type.";
+    }
+
+    return this;
+  }
 
   /// Copies current instance and change some values to the new instance.
   FlutterMoneyFormatter copyWith(

@@ -163,9 +163,29 @@ class _MyAppState extends State<MyApp> {
                           fmf
                               .copyWith(
                                   amount: 123456.7890,
-                                  compactFormatType: CompactFormatType.sort)
+                                  compactFormatType: CompactFormatType.short)
                               .output
                               .compactSymbolOnRight,
+                          style: subtitleStyle,
+                        ),
+                      ),
+                      ListTile(
+                        title: Text(
+                          'Fast Calc',
+                          style: titleStyle,
+                        ),
+                        subtitle: Text(
+                          '${FlutterMoneyFormatter(amount: 12345.678).fastCalc(type: FastCalcType.addition, amount: 1.111).fastCalc(type: FastCalcType.substraction, amount: 2.222).output.nonSymbol}',
+                          style: subtitleStyle,
+                        ),
+                      ),
+                      ListTile(
+                        title: Text(
+                          'Fast Calc',
+                          style: titleStyle,
+                        ),
+                        subtitle: Text(
+                          '${fmf.fastCalc(type: FastCalcType.addition, amount: 1234.567).fastCalc(type: FastCalcType.substraction, amount: 234.5678).output.nonSymbol}',
                           style: subtitleStyle,
                         ),
                       ),
