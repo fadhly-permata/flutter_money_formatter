@@ -1,4 +1,8 @@
 # Version 0.8.*
+* ## [0.8.2]
+    * **[UPDATES]**
+        - Upgrade Intl version
+
 * ## [0.8.1]
     * **[FIX]**
         - Fix invalid substring index as [described here](https://github.com/fadhly-permata/flutter_money_formatter/issues/5) and [here](https://github.com/fadhly-permata/flutter_money_formatter/issues/6)
