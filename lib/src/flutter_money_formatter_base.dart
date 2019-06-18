@@ -89,9 +89,8 @@ class FlutterMoneyFormatter {
             '$_compactNonSymbol${_utilities.spacer}${this.settings.symbol}',
         fractionDigitsOnly:
             _urs.substring((-1 == _decSepCharPos ? 0 : _decSepCharPos + 1)),
-        withoutFractionDigits:
-            _urs.substring(0, -1 == _decSepCharPos ? _urs.length - 1 : _decSepCharPos)
-    );
+        withoutFractionDigits: _urs.substring(
+            0, -1 == _decSepCharPos ? _urs.length - 1 : _decSepCharPos));
   }
 
   /// returns FlutterMoneyFormatter after calculating amount.
