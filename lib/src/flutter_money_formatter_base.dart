@@ -76,6 +76,8 @@ class FlutterMoneyFormatter {
     _utilities = _Utilities(amount: this.amount, settings: this.settings);
 
     String _urs = _utilities.refineSeparator;
+    int _decSepCharPos = _urs.indexOf(this.settings.decimalSeparator);
+
     return MoneyFormatterOutput(
         nonSymbol: _urs,
         symbolOnLeft: '${this.settings.symbol}${_utilities.spacer}$_urs',
@@ -86,9 +88,10 @@ class FlutterMoneyFormatter {
         compactSymbolOnRight:
             '$_compactNonSymbol${_utilities.spacer}${this.settings.symbol}',
         fractionDigitsOnly:
-            _urs.substring(_urs.indexOf(this.settings.decimalSeparator) + 1),
+            _urs.substring((-1 == _decSepCharPos ? 0 : _decSepCharPos + 1)),
         withoutFractionDigits:
-            _urs.substring(0, _urs.indexOf(this.settings.decimalSeparator)));
+            _urs.substring(0, -1 == _decSepCharPos ? _urs.length - 1 : _decSepCharPos)
+    );
   }
 
   /// returns FlutterMoneyFormatter after calculating amount.
