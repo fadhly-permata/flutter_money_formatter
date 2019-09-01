@@ -58,7 +58,9 @@ class _Utilities {
 
   /// Returns formatted number
   String get baseFormat => NumberFormat.currency(
-          symbol: '', decimalDigits: this.settings.fractionDigits, locale: 'en_US')
+          symbol: '',
+          decimalDigits: this.settings.fractionDigits,
+          locale: 'en_US')
       .format(amount);
 
   /// Returns formatted number with refined separator chars
