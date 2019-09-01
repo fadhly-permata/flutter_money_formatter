@@ -1,4 +1,8 @@
 # Version 0.8.*
+* ## [0.8.4]
+    * **[FIX] : By [Gerrel](https://github.com/Gerrel)**
+        - Convert comma separator value to dot separator for parsing
+
 * ## [0.8.3]
     * **[FIX] : By [Gerrel](https://github.com/Gerrel)**
         - Enforce decimal separator initialization.
