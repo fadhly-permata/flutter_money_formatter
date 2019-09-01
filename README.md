@@ -265,6 +265,14 @@ If you find some issues or bugs, please [report here.](https://github.com/fadhly
 Are you curious about the changes that occur in each version? [See here for detailed informations](https://pub.dartlang.org/packages/flutter_money_formatter#-changelog-tab-).
 
 
+## Contributors
+| Name | Links |
+| ---- | ----- |
+| Fadhly Permata | [https://github.com/fadhly-permata](https://github.com/fadhly-permata) |
+| Gerrel | [https://github.com/Gerrel](https://github.com/Gerrel) |
+| ...you... | ...your link... |
+
+
 ## LICENSE
 ```text
 Copyright (c) 2019, Fadhly Permata <fadhly.permata@gmail.com>
