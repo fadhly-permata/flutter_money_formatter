@@ -154,12 +154,13 @@ class FlutterMoneyFormatter {
   /// Returns compact format number without currency symbol
   String get _compactNonSymbol {
     String compacted = _utilities.baseCompact.format(amount);
-    String numerics = RegExp(r'(\d+\.\d+)|(\d+)')
+    String numerics = RegExp(r'(\d+(\.|,)\d+)|(\d+)')
         .allMatches(compacted)
         .map((_) => _.group(0))
         .toString()
         .replaceAll('(', '')
-        .replaceAll(')', '');
+        .replaceAll(')', '')
+        .replaceAll(',', '.');
 
     String alphas = compacted.replaceAll(numerics, '');
 
