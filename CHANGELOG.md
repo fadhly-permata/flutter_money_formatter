@@ -1,4 +1,9 @@
 # Version 0.8.*
+* ## [0.8.4]
+    * **[FIX] : By [Anis Alibegić](https://github.com/anisalibegic)**
+        - Upgrade Intl version
+
+
 * ## [0.8.3]
     * **[FIX] : By [Gerrel](https://github.com/Gerrel)**
         - Enforce decimal separator initialization.
