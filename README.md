@@ -249,11 +249,7 @@ print(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').output.symbolOn
 ## Demo
 
 For more complete samples, you can grab it from the [example directory](https://github.com/wiseminds/flutter_money_formatter/tree/master/example).
-
-## Our Other Package
-
-See our [other packages here](https://pub.dartlang.org/flutter/packages?q=email%3Afadhly.permata%40gmail.com).
-
+ 
 ## Help Me
 
 If you find some issues or bugs, please [report here.](https://github.com/wiseminds/flutter_money_formatter/issues/new?assignees=&labels=&template=bug_report.md&title=) You can also help in [requesting new features here.](https://github.com/wiseminds/flutter_money_formatter/issues/new?assignees=&labels=&template=feature_request.md&title=)
@@ -266,7 +262,7 @@ Are you curious about the changes that occur in each version? [See here for deta
 ## Contributors
 | Name | Links |
 | ---- | ----- |
-| Fadhly Permata | [https://github.com/wiseminds](https://github.com/wiseminds) |
+| Fadhly Permata | [https://github.com/wiseminds](https://github.com/fadhly-permata) |
 | Gerrel | [https://github.com/Gerrel](https://github.com/Gerrel) |
 | Wisdom Ekeh | [https://github.com/wiseminds](https://github.com/wiseminds) |
  
