@@ -42,7 +42,7 @@ import 'package:flutter/foundation.dart';
 ///
 /// This instance is used to hold utilities in comparing values held by [FlutterMoneyFormatter]
 class MoneyFormatterCompare {
-  MoneyFormatterCompare({@required this.amount});
+  MoneyFormatterCompare({required this.amount});
 
   final double amount;
 
