@@ -60,20 +60,20 @@ class MoneyFormatterSettings {
   }
 
   /// The [symbol] that will be used on formatted output, default value is $ (Dollar Sign)
-  String symbol;
+  String? symbol;
 
   // The character that will be used as thousand separator on formatted output, default value is ',' (comma)
-  String thousandSeparator;
+  String? thousandSeparator;
 
   /// The character that will be used as decimal separator on formatted output, default value is '.' (dot)
-  String decimalSeparator;
+  String? decimalSeparator;
 
   /// The character that will be used as separator between the numbers and the symbol.
-  String symbolAndNumberSeparator;
+  String? symbolAndNumberSeparator;
 
   /// The fraction digits that will be used on formatted output, default value is 2.
-  int fractionDigits;
+  int? fractionDigits;
 
   /// Compact format type, for example using 'million' or 'M'
-  CompactFormatType compactFormatType;
+  CompactFormatType? compactFormatType;
 }

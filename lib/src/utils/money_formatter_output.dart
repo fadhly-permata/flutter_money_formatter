@@ -45,14 +45,14 @@ import 'package:flutter/foundation.dart';
 class MoneyFormatterOutput {
   /// Init instance of [MoneyFormatterOutput]
   MoneyFormatterOutput(
-      {@required this.nonSymbol,
-      @required this.symbolOnLeft,
-      @required this.symbolOnRight,
-      @required this.compactNonSymbol,
-      @required this.compactSymbolOnLeft,
-      @required this.compactSymbolOnRight,
-      @required this.fractionDigitsOnly,
-      @required this.withoutFractionDigits});
+      {required this.nonSymbol,
+      required this.symbolOnLeft,
+      required this.symbolOnRight,
+      required this.compactNonSymbol,
+      required this.compactSymbolOnLeft,
+      required this.compactSymbolOnRight,
+      required this.fractionDigitsOnly,
+      required this.withoutFractionDigits});
 
   /// Returns formatted number without currency symbol
   final String nonSymbol;
