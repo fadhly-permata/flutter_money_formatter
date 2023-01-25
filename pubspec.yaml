@@ -1,6 +1,6 @@
 name: money_formatter
 description: MoneyFormatter is a Flutter extension to formatting various types of currencies according to the characteristics you like, without having to be tied to any localization.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/wiseminds/flutter_money_formatter
 
 environment:
