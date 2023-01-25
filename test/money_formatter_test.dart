@@ -1,6 +1,5 @@
 // import 'package:flutter_test/flutter_test.dart';
 
-import 'package:money_formatter/money_formatter.dart';
 
 void main() {
   // test('adds one to input values', () {
