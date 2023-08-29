@@ -1,2 +1,5 @@
 .idea
 example/ios/Flutter/flutter_export_environment.sh
+.idea/libraries/Dart_SDK.xml
+.idea/modules.xml
+.idea/workspace.xml
